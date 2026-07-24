@@ -36,7 +36,10 @@ func movimiento_vertical(delta):
 
 func animaciones():
 	if !is_on_floor():
-		%AnimacionesPersonaje.play("saltar")
+		if contador_salto == 0:
+			%AnimacionesPersonaje.play("doble_salto")
+		else:
+			%AnimacionesPersonaje.play("saltar")
 	elif velocity.x != 0:
 		%AnimacionesPersonaje.play("correr")
 	else:
