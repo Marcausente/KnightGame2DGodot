@@ -5,6 +5,9 @@ var speed: float = 100.00
 func _ready(): #Al iniciar el script se ejecuta esta funcion
 	inicio_funcion_test()
 
+func _process(delta): #Es una funcion que se llama constantemente, una vez cada frame, y recibe delta que es el numero en decimales del frame anterior
+	position.x += 10 * delta
+
 
 func inicio_funcion_test(): #Funcion que nos da los datos de prueba por consola
 	print("Se ha iniciado la funcion")
