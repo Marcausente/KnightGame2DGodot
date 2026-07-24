@@ -2,9 +2,19 @@
 
 [ext_resource type="SpriteFrames" uid="uid://uvftxttjne3l" path="res://Escenas/personaje/sprite_frames_personaje.tres" id="1_u5lov"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(16, 16)
+
 [node name="Personaje" type="CharacterBody2D" unique_id=1115841959]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2090908582]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=657854446]
 texture_filter = 1
+position = Vector2(0, -1)
 sprite_frames = ExtResource("1_u5lov")
-animation = &"idle"
+animation = &"correr"
+frame = 2
+frame_progress = 0.8910596
