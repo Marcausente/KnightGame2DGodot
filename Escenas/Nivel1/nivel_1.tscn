@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://bcc2sh0escv8p" path="res://tile_sets/maderas.tres" id="1_a26ju"]
 [ext_resource type="PackedScene" uid="uid://bwkonjhs6g5a3" path="res://Escenas/bordes/bordes.tscn" id="2_aqv8d"]
+[ext_resource type="PackedScene" uid="uid://cxm8wxdnmii3w" path="res://Escenas/personaje/personaje.tscn" id="3_c3j3g"]
 
 [node name="Nivel1" type="Node2D" unique_id=1476173266]
 
@@ -10,3 +11,6 @@ tile_map_data = PackedByteArray("AAD6/wYAAQADAAQAAAD3/wYAAQABAAQAAAD3/wUAAQABAAQ
 tile_set = ExtResource("1_a26ju")
 
 [node name="Bordes" parent="." unique_id=71404413 instance=ExtResource("2_aqv8d")]
+
+[node name="Personaje" parent="." unique_id=1115841959 instance=ExtResource("3_c3j3g")]
+position = Vector2(31, -50)
