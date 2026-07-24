@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://st86uqbd8lgn"]
+
+[ext_resource type="Texture2D" uid="uid://bfypqkfj4dbl5" path="res://icon.svg" id="1_guv23"]
+
+[node name="EscenaFisicas" type="Node2D" unique_id=1933460823]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1100560310]
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=541159609]
+position = Vector2(555, 220)
+texture = ExtResource("1_guv23")
