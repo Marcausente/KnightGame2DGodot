@@ -8,9 +8,9 @@ func _ready(): #Al iniciar el script se ejecuta esta funcion
 	inicio_funcion_test()
 
 func _physics_process(delta): #Es una funcion que se llama constantemente, una vez cada frame, y recibe delta que es el numero en decimales del frame anterior
-	
 	movimiento_horizontal(_speed) #Ejecuta la funcion de movimiento horizontal
 	movimiento_vertical(delta)
+	animaciones()
 	move_and_slide() #Basciamente hace todas las comprobaciones de fisica con paredes, suelos etc despues de mover
 
 
@@ -33,4 +33,11 @@ func movimiento_vertical(delta):
 	if Input.is_action_just_pressed("ui_accept") and contador_salto > 0: #Si presionas el espacio y hay mas de 0 contadores de salto
 		velocity.y = _jump #Aumentara en el eje y la velocidad de salto
 		contador_salto = contador_salto-1 #Te quita un contador de salto, para que solo tengas un salto extra
-		print(contador_salto)
+
+func animaciones():
+	if !is_on_floor():
+		%AnimacionesPersonaje.play("saltar")
+	elif velocity.x != 0:
+		%AnimacionesPersonaje.play("correr")
+	else:
+		%AnimacionesPersonaje.play("idle")
