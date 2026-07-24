@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var _speed: float = 100.00
 var _jump: float = -200.0
+var contador_salto: int = 2
 
 func _ready(): #Al iniciar el script se ejecuta esta funcion
 	inicio_funcion_test()
@@ -26,6 +27,10 @@ func movimiento_horizontal(speed):
 		velocity.x = 0
 
 func movimiento_vertical(delta, jump):
+	if is_on_floor():
+		contador_salto = 2
 	velocity += get_gravity() * delta #Lo mismo que poner velocity = velocity + get_gravity(), le sumas el valor de la gravedad a la variable velocity
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept") and contador_salto > 0:
 		velocity.y = jump
+		contador_salto = contador_salto-1
+		print(contador_salto)
