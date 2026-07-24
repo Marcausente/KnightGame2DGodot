@@ -18,6 +18,18 @@ region = Rect2(32, 0, 16, 16)
 atlas = ExtResource("1_p5nre")
 region = Rect2(48, 16, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_037nx"]
+atlas = ExtResource("1_p5nre")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fe7lq"]
+atlas = ExtResource("1_p5nre")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g164t"]
+atlas = ExtResource("1_p5nre")
+region = Rect2(32, 16, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_p5nre"]
 atlas = ExtResource("1_p5nre")
 region = Rect2(0, 0, 16, 16)
@@ -53,6 +65,15 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0gley")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_037nx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fe7lq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g164t")
 }],
 "loop": 1,
 "name": &"doble_salto",
