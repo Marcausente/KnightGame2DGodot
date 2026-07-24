@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://cxm8wxdnmii3w"]
 
+[ext_resource type="SpriteFrames" uid="uid://uvftxttjne3l" path="res://Escenas/personaje/sprite_frames_personaje.tres" id="1_u5lov"]
+
 [node name="Personaje" type="CharacterBody2D" unique_id=1115841959]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=657854446]
+texture_filter = 1
+sprite_frames = ExtResource("1_u5lov")
+animation = &"correr"
+frame_progress = 0.69758373

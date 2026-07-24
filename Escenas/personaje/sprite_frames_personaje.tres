@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://uvftxttjne3l"]
+
+[ext_resource type="Texture2D" uid="uid://diunix6gsfdq4" path="res://sprites/knight_spritesheet.svg" id="1_p5nre"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmiov"]
+atlas = ExtResource("1_p5nre")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xngf2"]
+atlas = ExtResource("1_p5nre")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kib03"]
+atlas = ExtResource("1_p5nre")
+region = Rect2(32, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmiov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xngf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kib03")
+}],
+"loop": 1,
+"name": &"correr",
+"speed": 5.0
+}]
