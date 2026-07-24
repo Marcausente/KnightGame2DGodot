@@ -8,4 +8,4 @@ func _ready(): #Al iniciar el script se ejecuta esta funcion
 
 func inicio_funcion_test(): #Funcion que nos da los datos de prueba por consola
 	print("Se ha iniciado la funcion")
-	print(speed)
+	print("Velocidad: ", speed) 
