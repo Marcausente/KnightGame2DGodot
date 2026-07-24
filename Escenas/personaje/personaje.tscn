@@ -7,5 +7,4 @@
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=657854446]
 texture_filter = 1
 sprite_frames = ExtResource("1_u5lov")
-animation = &"correr"
-frame_progress = 0.69758373
+animation = &"idle"
