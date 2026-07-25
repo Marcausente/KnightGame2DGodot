@@ -6,7 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(12, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(12, 16)
+
 [node name="Personaje" type="CharacterBody2D" unique_id=1115841959]
+collision_layer = 4
 script = ExtResource("1_g78av")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2090908582]
@@ -19,3 +23,9 @@ texture_filter = 1
 position = Vector2(0, -1)
 sprite_frames = ExtResource("1_u5lov")
 animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1535060178]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1999662409]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_yf5fn")
