@@ -1,13 +1,54 @@
-[gd_scene format=3 uid="uid://d0qnflpp2te2c"]
+[gd_scene format=4 uid="uid://d0qnflpp2te2c"]
 
 [ext_resource type="PackedScene" uid="uid://bwkonjhs6g5a3" path="res://Escenas/bordes/bordes.tscn" id="1_10i3l"]
 [ext_resource type="PackedScene" uid="uid://cxm8wxdnmii3w" path="res://Escenas/personaje/personaje.tscn" id="2_j2fs8"]
 [ext_resource type="PackedScene" uid="uid://dxagokho6vqdp" path="res://Escenas/Contenedor_Monedas/conentedor_monedas.tscn" id="3_02wjt"]
+[ext_resource type="Texture2D" uid="uid://chw7t5rgvpd54" path="res://sprites/tilesetmadera.svg" id="4_j2fs8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_02wjt"]
+texture = ExtResource("4_j2fs8")
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+8:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+5:4/0 = 0
+7:4/0 = 0
+9:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+8:5/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+5:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_g4v7s"]
+sources/0 = SubResource("TileSetAtlasSource_02wjt")
 
 [node name="Nivel2" type="Node2D" unique_id=615398450]
 
 [node name="Bordes" parent="." unique_id=71404413 instance=ExtResource("1_10i3l")]
 
 [node name="Personaje" parent="." unique_id=1115841959 instance=ExtResource("2_j2fs8")]
+position = Vector2(-193, 101)
 
 [node name="ConentedorMonedas" parent="." unique_id=268482440 instance=ExtResource("3_02wjt")]
+
+[node name="Nivel2" type="TileMapLayer" parent="." unique_id=1768956893]
+tile_map_data = PackedByteArray("AAD2/wYAAAAFAAcAAAD5/wQAAAAFAAcAAAD9/wMAAAAFAAcAAAD3/wYAAAAIAAUAAAD4/wYAAAAIAAUAAAD5/wYAAAAIAAUAAAD6/wYAAAAIAAUAAAD7/wYAAAAIAAUAAAD8/wYAAAAIAAUAAAD9/wYAAAAIAAUAAAD+/wYAAAAIAAUAAAACAAMAAAACAAMAAAABAAMAAAABAAMAAAABAAUAAAABAAQAAAABAAQAAAABAAQAAAABAAYAAAABAAQAAAACAAQAAAACAAQAAAACAAUAAAACAAQAAAACAAYAAAACAAQAAAADAAMAAAADAAMAAAADAAQAAAADAAQAAAADAAUAAAADAAQAAAADAAYAAAADAAQAAAAIAAUAAAAFAAcAAAAMAAMAAAAFAAcAAAAJAAEAAAAFAAcAAAAGAP//AAAFAAcAAAAGAAYAAAAIAAUAAAAHAAYAAAAIAAUAAAAIAAYAAAAIAAUAAAAJAAYAAAAIAAUAAAAKAAYAAAAIAAUAAAALAAYAAAAIAAUAAAAMAAYAAAAIAAUAAAAMAP3/AAAJAAQAAAAMAP7/AAAJAAQAAAAMAP//AAAJAAQAAAAMAPz/AAACAAcAAAALAPz/AAABAAcAAAD//wYAAAAIAAUAAAAAAAYAAAAIAAUAAAD2//v/AAAIAAUAAAA=")
+tile_set = SubResource("TileSet_g4v7s")

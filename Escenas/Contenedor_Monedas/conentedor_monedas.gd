@@ -20,3 +20,6 @@ func _on_moneda_recogida() -> void:
 	print("Monedas recogidas: ", _monedas_recogidas, "/", _total_monedas)
 	if _monedas_recogidas == _total_monedas:
 		print("Nivel superado")
+		var nodopadre = get_parent() #Recibe el nodo padre del contenedor de monedas
+		var nodoabuelo = nodopadre.get_parent() #Recibe el nodo padre del nodo padre, el nodo abuelo
+		nodoabuelo.siguiente_nivel()
