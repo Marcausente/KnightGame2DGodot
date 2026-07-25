@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var _speed: float = 100.00
-var _jump: float = -250.0
+var _jump: float = -220.0
 var contador_salto: int = 2
 
 func _ready(): #Al iniciar el script se ejecuta esta funcion
