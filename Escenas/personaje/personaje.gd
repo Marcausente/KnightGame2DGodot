@@ -14,6 +14,8 @@ func _ready(): #Al iniciar el script se ejecuta esta funcion
 	inicio_funcion_test()
 
 func _physics_process(delta): #Es una funcion que se llama constantemente, una vez cada frame, y recibe delta que es el numero en decimales del frame anterior
+	if _muerto: #Si esta muerto nos devuelve fuera de la funcion para que no nos podamos mover
+		return
 	movimiento_horizontal(_speed) #Ejecuta la funcion de movimiento horizontal
 	movimiento_vertical(delta)
 	animaciones()
@@ -55,8 +57,14 @@ func animaciones():
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void: #Funcion conectada a Personaje -> Area2D -> Señales -> body_entered
-	%AnimacionesPersonaje.modulate = Color(18.892, 0.0, 0.0, 1.0) #Hace que el personaje cambie a rojo
 	_muerto = true #El boleano a muerto pasa a ser verdad
+	velocity = Vector2.ZERO #Detiene el movimiento inmediatamente
+	%AnimacionesPersonaje.modulate = Color(18.892, 0.0, 0.0, 1.0) #Hace que el personaje cambie a rojo
 	%AnimacionesPersonaje.stop()
 	print("Recibe daño")
-	personaje_muerto.emit()
+	
+	var timer: Timer = Timer.new() #Crea una variable timer, basicamente es un contador de tiempo
+	add_child(timer) #Añadimos el timer a la escena
+	timer.start(0.3) #Inicia el timer en 0.3s
+	await timer.timeout #Espera hasta que acabe el timer	
+	personaje_muerto.emit() #Emite el personaje muerto

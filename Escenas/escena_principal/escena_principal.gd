@@ -28,4 +28,4 @@ func _eliminar_nivel():
 
 func _reiniciar_nivel(): 
 	_nivel_instanciado.queue_free() #Borramos el nivel actual
-	_crear_nivel(_nivel_actual) #Y lo volvemos a cargar
+	_crear_nivel.call_deferred(_nivel_actual) #Y lo volvemos a cargar, call deferred es para eviatar errores y cargarlo al final del frame
