@@ -21,8 +21,10 @@ func inicio_funcion_test(): #Funcion que nos da los datos de prueba por consola
 func movimiento_horizontal(speed):
 	if Input.is_action_pressed("ui_right"): #Al apretarse la flecha derecha
 		velocity.x = speed #La velocidad se incrementa en el eje X (Derecha)
+		%AnimacionesPersonaje.flip_h = false
 	elif Input.is_action_pressed("ui_left"): #Al apretarse la flecha Izquierda
 		velocity.x = -speed #La velocidad se resta en el eje X (Izquierda)
+		%AnimacionesPersonaje.flip_h = true
 	else: 
 		velocity.x = 0
 
