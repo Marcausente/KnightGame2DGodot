@@ -13,4 +13,4 @@ tile_set = ExtResource("1_a26ju")
 [node name="Bordes" parent="." unique_id=71404413 instance=ExtResource("2_aqv8d")]
 
 [node name="Personaje" parent="." unique_id=1115841959 instance=ExtResource("3_c3j3g")]
-position = Vector2(31, -50)
+position = Vector2(-199, 101)
