@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bwkonjhs6g5a3" path="res://Escenas/bordes/bordes.tscn" id="1_10i3l"]
 [ext_resource type="PackedScene" uid="uid://cxm8wxdnmii3w" path="res://Escenas/personaje/personaje.tscn" id="2_j2fs8"]
 [ext_resource type="PackedScene" uid="uid://dxagokho6vqdp" path="res://Escenas/Contenedor_Monedas/conentedor_monedas.tscn" id="3_02wjt"]
+[ext_resource type="PackedScene" uid="uid://c6l7ggwpsde7q" path="res://Escenas/moneda/moneda.tscn" id="4_02wjt"]
 [ext_resource type="TileSet" uid="uid://bcc2sh0escv8p" path="res://tile_sets/maderas.tres" id="4_j2fs8"]
 
 [node name="Nivel2" type="Node2D" unique_id=615398450]
@@ -13,6 +14,24 @@
 position = Vector2(-193, 101)
 
 [node name="ConentedorMonedas" parent="." unique_id=268482440 instance=ExtResource("3_02wjt")]
+
+[node name="Moneda" parent="ConentedorMonedas" unique_id=1063987536 instance=ExtResource("4_02wjt")]
+position = Vector2(42, 35)
+
+[node name="Moneda3" parent="ConentedorMonedas" unique_id=731716596 instance=ExtResource("4_02wjt")]
+position = Vector2(152, 3)
+
+[node name="Moneda4" parent="ConentedorMonedas" unique_id=1924783961 instance=ExtResource("4_02wjt")]
+position = Vector2(195, -76)
+
+[node name="Moneda5" parent="ConentedorMonedas" unique_id=884561087 instance=ExtResource("4_02wjt")]
+position = Vector2(13, -62)
+
+[node name="Moneda6" parent="ConentedorMonedas" unique_id=408432874 instance=ExtResource("4_02wjt")]
+position = Vector2(-194, -62)
+
+[node name="Moneda2" parent="ConentedorMonedas" unique_id=950591292 instance=ExtResource("4_02wjt")]
+position = Vector2(-41, 34)
 
 [node name="Nivel2" type="TileMapLayer" parent="." unique_id=1768956893]
 tile_map_data = PackedByteArray("AAD9/wMAAQAFAAcAAAD5/wYAAQAIAAUAAAD7/wYAAQAIAAUAAAD8/wYAAQAIAAUAAAD9/wYAAQAIAAUAAAD+/wYAAQAIAAUAAAACAAMAAQACAAMAAAABAAMAAQABAAMAAAABAAUAAQABAAQAAAABAAQAAQABAAQAAAABAAYAAQABAAQAAAACAAQAAQACAAQAAAACAAUAAQACAAQAAAACAAYAAQACAAQAAAADAAMAAQADAAMAAAADAAQAAQADAAQAAAADAAUAAQADAAQAAAADAAYAAQADAAQAAAAIAAUAAQAFAAcAAAAMAAMAAQAFAAcAAAAJAAEAAQAFAAcAAAAGAP//AQAFAAcAAAAGAAYAAQAIAAUAAAAHAAYAAQAIAAUAAAAIAAYAAQAIAAUAAAAJAAYAAQAIAAUAAAAKAAYAAQAIAAUAAAALAAYAAQAIAAUAAAAMAAYAAQAIAAUAAAAMAP3/AQAJAAQAAAAMAP7/AQAJAAQAAAAMAP//AQAJAAQAAAAMAPz/AQACAAcAAAALAPz/AQABAAcAAAD//wYAAQAIAAUAAAAAAAYAAQAIAAUAAAABAP3/AQACAAcAAAACAP3/AQACAAcAAAADAP3/AQADAAcAAAAAAP3/AQACAAcAAAD///3/AQACAAcAAAD+//3/AQABAAcAAAD6//v/AQAFAAcAAAD0//3/AQACAAcAAAD1//3/AQACAAcAAAD2//3/AQADAAcAAADz//3/AQABAAcAAAD6/wYAAQAIAAUAAAD4/wYAAQAIAAUAAAD5/wQAAQAFAAcAAAAMAPn/AQAIAAMAAAACAP7/AQAJAAcAAAA=")
