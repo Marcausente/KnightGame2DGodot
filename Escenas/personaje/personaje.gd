@@ -5,6 +5,7 @@ extends CharacterBody2D
 var _speed: float = 100.00
 var _jump: float = -220.0
 var contador_salto: int = 2
+var _muerto: bool = false
 
 func _ready(): #Al iniciar el script se ejecuta esta funcion
 	inicio_funcion_test()
@@ -51,5 +52,7 @@ func animaciones():
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void: #Funcion conectada a Personaje -> Area2D -> Señales -> body_entered
-	%AnimacionesPersonaje.material = material_personaje_rojo
+	%AnimacionesPersonaje.modulate = Color(18.892, 0.0, 0.0, 1.0) #Hace que el personaje cambie a rojo
+	_muerto = true #El boleano a muerto pasa a ser verdad
+	%AnimacionesPersonaje.stop()
 	print("Recibe daño")
