@@ -21,10 +21,22 @@ position = Vector2(-199, 101)
 [node name="ConentedorMonedas" parent="." unique_id=268482440 instance=ExtResource("4_xa6wb")]
 
 [node name="Moneda" parent="ConentedorMonedas" unique_id=1063987536 instance=ExtResource("4_2svej")]
-position = Vector2(39, 95)
+position = Vector2(198, -94)
+
+[node name="Moneda5" parent="ConentedorMonedas" unique_id=527056401 instance=ExtResource("4_2svej")]
+position = Vector2(169, -46)
+
+[node name="Moneda6" parent="ConentedorMonedas" unique_id=1848399390 instance=ExtResource("4_2svej")]
+position = Vector2(-78, -80)
+
+[node name="Moneda7" parent="ConentedorMonedas" unique_id=705281457 instance=ExtResource("4_2svej")]
+position = Vector2(-193, -79)
+
+[node name="Moneda4" parent="ConentedorMonedas" unique_id=314799906 instance=ExtResource("4_2svej")]
+position = Vector2(88, -16)
 
 [node name="Moneda2" parent="ConentedorMonedas" unique_id=543274284 instance=ExtResource("4_2svej")]
-position = Vector2(-8, 14)
+position = Vector2(-7, 17)
 
 [node name="Moneda3" parent="ConentedorMonedas" unique_id=1268069368 instance=ExtResource("4_2svej")]
-position = Vector2(-110, 44)
+position = Vector2(-110, 49)

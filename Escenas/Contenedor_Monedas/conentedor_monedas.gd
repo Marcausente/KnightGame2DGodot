@@ -15,5 +15,5 @@ func _ready() -> void:
 			moneda.moneda_recogida.connect(_on_moneda_recogida) #"Cuando emitas la señal moneda_recogida, llama automáticamente a _on_moneda_recogida()."
 
 func _on_moneda_recogida() -> void:
-	_monedas_recogidas += 1
+	_monedas_recogidas += 1 #Se suma 1 al contador de monedas
 	print("Monedas recogidas: ", _monedas_recogidas, "/", _total_monedas)
