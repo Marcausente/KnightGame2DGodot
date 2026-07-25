@@ -19,10 +19,10 @@ func inicio_funcion_test(): #Funcion que nos da los datos de prueba por consola
 	print("Velocidad: ", _speed) 
 	
 func movimiento_horizontal(speed):
-	if Input.is_action_pressed("ui_right"): #Al apretarse la flecha derecha
+	if Input.is_action_pressed("derecha"): #Al apretarse la flecha derecha
 		velocity.x = speed #La velocidad se incrementa en el eje X (Derecha)
 		%AnimacionesPersonaje.flip_h = false
-	elif Input.is_action_pressed("ui_left"): #Al apretarse la flecha Izquierda
+	elif Input.is_action_pressed("izquierda"): #Al apretarse la flecha Izquierda
 		velocity.x = -speed #La velocidad se resta en el eje X (Izquierda)
 		%AnimacionesPersonaje.flip_h = true
 	else: 
@@ -32,7 +32,7 @@ func movimiento_vertical(delta):
 	if is_on_floor():
 		contador_salto = 2 #Cuando esta en el suelo, la varibale de contador de salto vuelve a 2
 	velocity += get_gravity() * delta #Lo mismo que poner velocity = velocity + get_gravity(), le sumas el valor de la gravedad a la variable velocity
-	if Input.is_action_just_pressed("ui_accept") and contador_salto > 0: #Si presionas el espacio y hay mas de 0 contadores de salto
+	if Input.is_action_just_pressed("saltar") and contador_salto > 0: #Si presionas el espacio y hay mas de 0 contadores de salto
 		velocity.y = _jump #Aumentara en el eje y la velocidad de salto
 		contador_salto = contador_salto-1 #Te quita un contador de salto, para que solo tengas un salto extra
 
