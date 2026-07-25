@@ -2,5 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bdlt0poe8h283" path="res://Escenas/Contenedor_Monedas/conentedor_monedas.gd" id="1_anhha"]
 
-[node name="ConentedorMonedas" type="Node" unique_id=268482440]
+[node name="ConentedorMonedas" type="Node2D" unique_id=268482440]
 script = ExtResource("1_anhha")
+
