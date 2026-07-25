@@ -17,3 +17,5 @@ func _ready() -> void:
 func _on_moneda_recogida() -> void:
 	_monedas_recogidas += 1 #Se suma 1 al contador de monedas
 	print("Monedas recogidas: ", _monedas_recogidas, "/", _total_monedas)
+	if _monedas_recogidas == _total_monedas:
+		print("Nivel superado")
