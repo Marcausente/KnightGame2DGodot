@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://21cdvs7ggksj" path="res://Escenas/personaje/personaje.gd" id="1_g78av"]
 [ext_resource type="SpriteFrames" uid="uid://uvftxttjne3l" path="res://Escenas/personaje/sprite_frames_personaje.tres" id="1_u5lov"]
+[ext_resource type="Material" uid="uid://dbvwh27stft3u" path="res://Escenas/personaje/material_personaje_rojo.tres" id="2_vy5do"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(12, 16)
@@ -12,6 +13,7 @@ size = Vector2(12, 16)
 [node name="Personaje" type="CharacterBody2D" unique_id=1115841959]
 collision_layer = 4
 script = ExtResource("1_g78av")
+material_personaje_rojo = ExtResource("2_vy5do")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2090908582]
 position = Vector2(-1, -1)

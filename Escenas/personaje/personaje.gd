@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var material_personaje_rojo: ShaderMaterial
+
 var _speed: float = 100.00
 var _jump: float = -220.0
 var contador_salto: int = 2
@@ -48,5 +50,6 @@ func animaciones():
 		%AnimacionesPersonaje.play("idle")
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(body: Node2D) -> void: #Funcion conectada a Personaje -> Area2D -> Señales -> body_entered
+	%AnimacionesPersonaje.material = material_personaje_rojo
 	print("Recibe daño")
