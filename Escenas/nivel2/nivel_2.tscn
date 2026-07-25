@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d0qnflpp2te2c"]
+
+[ext_resource type="PackedScene" uid="uid://bwkonjhs6g5a3" path="res://Escenas/bordes/bordes.tscn" id="1_10i3l"]
+[ext_resource type="PackedScene" uid="uid://cxm8wxdnmii3w" path="res://Escenas/personaje/personaje.tscn" id="2_j2fs8"]
+[ext_resource type="PackedScene" uid="uid://dxagokho6vqdp" path="res://Escenas/Contenedor_Monedas/conentedor_monedas.tscn" id="3_02wjt"]
+
+[node name="Nivel2" type="Node2D" unique_id=615398450]
+
+[node name="Bordes" parent="." unique_id=71404413 instance=ExtResource("1_10i3l")]
+
+[node name="Personaje" parent="." unique_id=1115841959 instance=ExtResource("2_j2fs8")]
+
+[node name="ConentedorMonedas" parent="." unique_id=268482440 instance=ExtResource("3_02wjt")]

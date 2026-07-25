@@ -1,3 +1,4 @@
+class_name ContenedorMonedas
 extends Node2D
 
 
