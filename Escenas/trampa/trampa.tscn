@@ -11,6 +11,7 @@ region = Rect2(144, 112, 16, 16)
 size = Vector2(16, 16)
 
 [node name="trampa" type="RigidBody2D" unique_id=1040114956 node_paths=PackedStringArray("raycast")]
+collision_layer = 3
 collision_mask = 5
 lock_rotation = true
 freeze = true
