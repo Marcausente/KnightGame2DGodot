@@ -1,3 +1,22 @@
 [gd_scene format=3 uid="uid://c6l7ggwpsde7q"]
 
+[ext_resource type="Texture2D" uid="uid://chw7t5rgvpd54" path="res://sprites/tilesetmadera.svg" id="1_48f7c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4v7s"]
+atlas = ExtResource("1_48f7c")
+region = Rect2(112.33659, 112.53845, 15.308151, 14.964859)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 8.0
+
 [node name="Moneda" type="Node2D" unique_id=1063987536]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1934788865]
+texture = SubResource("AtlasTexture_g4v7s")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1805406919]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=386978032]
+shape = SubResource("CircleShape2D_g4v7s")
