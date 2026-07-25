@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal personaje_muerto #Funcion que enviaremos al scrpit escena_principal para reiniciar el nivel
+
 @export var material_personaje_rojo: ShaderMaterial
 
 var _speed: float = 100.00
@@ -8,6 +10,7 @@ var contador_salto: int = 2
 var _muerto: bool = false
 
 func _ready(): #Al iniciar el script se ejecuta esta funcion
+	add_to_group("personajes") #Necesario para enviar signals a otros scripts
 	inicio_funcion_test()
 
 func _physics_process(delta): #Es una funcion que se llama constantemente, una vez cada frame, y recibe delta que es el numero en decimales del frame anterior
@@ -56,3 +59,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void: #Funcion conectada a Person
 	_muerto = true #El boleano a muerto pasa a ser verdad
 	%AnimacionesPersonaje.stop()
 	print("Recibe daño")
+	personaje_muerto.emit()

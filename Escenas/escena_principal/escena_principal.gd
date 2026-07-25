@@ -14,3 +14,18 @@ func _crear_nivel(numero_nivel: int):
 	_nivel_instanciado = niveles[numero_nivel - 1].instantiate() 
 	#Ahora _nivel_instanciado es el nivel que queremos cargar, es decir, el 0
 	add_child(_nivel_instanciado) #Añade como hijo lo que tengamos instanciado, lo añade hacia la referencia del codigo, en este caso escena_principal
+	
+	#Al crear un nuevo nivel buscara entre los hijos de la escena a ver cual es el personaje
+	var hijos := _nivel_instanciado.get_children()
+	for i in hijos.size(): #Hacemos un for que recorra todo el tamaño del array
+		if hijos[i].is_in_group("personajes"): #Si el hijo actual esta en el grupo personajes
+			var personaje = hijos[i] #Crea una variable que sea personajes que es igual a la señal enviada por personaje
+			personaje.personaje_muerto.connect(_reiniciar_nivel) #Conecta el nodo de personaje al emitido por el otro script y ejecuta la funcion reiniciar nivel
+			break
+		
+func _eliminar_nivel():
+	_nivel_instanciado.queue_free() #Libera el nodo en cuestion (En este caso el actual, liberar es borrar)
+
+func _reiniciar_nivel(): 
+	_nivel_instanciado.queue_free() #Borramos el nivel actual
+	_crear_nivel(_nivel_actual) #Y lo volvemos a cargar
