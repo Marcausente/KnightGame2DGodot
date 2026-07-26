@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://dxagokho6vqdp"]
 
 [ext_resource type="Script" uid="uid://bdlt0poe8h283" path="res://Escenas/Contenedor_Monedas/conentedor_monedas.gd" id="1_anhha"]
+[ext_resource type="AudioStream" uid="uid://dwdrsjnxm025i" path="res://sounds/coin.wav" id="2_xuuec"]
 
-[node name="ConentedorMonedas" type="Node2D" unique_id=268482440]
+[node name="ConentedorMonedas" type="Node2D" unique_id=268482440 node_paths=PackedStringArray("reproductor")]
 script = ExtResource("1_anhha")
+reproductor = NodePath("AudioStreamPlayer2D")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1816259348]
+stream = ExtResource("2_xuuec")

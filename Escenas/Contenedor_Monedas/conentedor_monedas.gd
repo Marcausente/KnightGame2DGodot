@@ -1,6 +1,9 @@
 class_name ContenedorMonedas
 extends Node2D
 
+@export var reproductor: AudioStreamPlayer2D #Funcion para poder usar el reproductor de audi
+
+
 
 var _total_monedas: int
 var _monedas_recogidas: int = 0
@@ -8,7 +11,13 @@ var _monedas_recogidas: int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var monedas := get_children() # Nos devuelve el array de monedas hijas
-	_total_monedas = monedas.size() # Nos da el número total de monedas del nivel sacado del array
+	
+	#Para ver cuantas monedas tiene un nivel vamos a hacer lo siguiente
+	for i in monedas.size(): #Hacemos un for que recorra todo el tamaño del array
+		if monedas[i].is_in_group("monedas"): #Si el hijo actual esta en el grupo moendas
+			_total_monedas += 1 #Sumamos +1 en el grupo de monedas
+			break
+			
 	
 	for i in _total_monedas: # 'i' es el número de índice (0, 1, 2...), almacenamos la moneda en cuestion en i en cada ciclo
 		var moneda = monedas[i] # Obtenemos el nodo moneda usando el índice 'i', ahora la moneda es el numero de monedas del arrau
@@ -18,6 +27,7 @@ func _ready() -> void:
 func _on_moneda_recogida() -> void:
 	_monedas_recogidas += 1 #Se suma 1 al contador de monedas
 	print("Monedas recogidas: ", _monedas_recogidas, "/", _total_monedas)
+	reproductor.play() #Hace que suene el sonido de la moneda, que esta en AudioStreamPlayer2D
 	if _monedas_recogidas == _total_monedas:
 		print("Nivel superado")
 		var nodopadre = get_parent() #Recibe el nodo padre del contenedor de monedas
