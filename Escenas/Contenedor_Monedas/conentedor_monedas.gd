@@ -14,15 +14,12 @@ func _ready() -> void:
 	
 	#Para ver cuantas monedas tiene un nivel vamos a hacer lo siguiente
 	for i in monedas.size(): #Hacemos un for que recorra todo el tamaño del array
-		if monedas[i].is_in_group("monedas"): #Si el hijo actual esta en el grupo moendas
+		var moneda = monedas[i] #Moneda será la moneda actual que esta recorreindo el bucle
+		if moneda.is_in_group("monedas"): #Si el hijo actual esta en el grupo moendas
 			_total_monedas += 1 #Sumamos +1 en el grupo de monedas
-			break
-			
-	
-	for i in _total_monedas: # 'i' es el número de índice (0, 1, 2...), almacenamos la moneda en cuestion en i en cada ciclo
-		var moneda = monedas[i] # Obtenemos el nodo moneda usando el índice 'i', ahora la moneda es el numero de monedas del arrau
 		if moneda.has_signal("moneda_recogida"): # Si tiene la señal enviada por moneda
 			moneda.moneda_recogida.connect(_on_moneda_recogida) #"Cuando emitas la señal moneda_recogida, llama automáticamente a _on_moneda_recogida()."
+	
 
 func _on_moneda_recogida() -> void:
 	_monedas_recogidas += 1 #Se suma 1 al contador de monedas
