@@ -56,12 +56,14 @@ func animaciones():
 		%AnimacionesPersonaje.play("idle")
 
 
+#Funcion que detecta la muerte
 func _on_area_2d_body_entered(body: Node2D) -> void: #Funcion conectada a Personaje -> Area2D -> Señales -> body_entered
 	_muerto = true #El boleano a muerto pasa a ser verdad
 	velocity = Vector2.ZERO #Detiene el movimiento inmediatamente
 	%AnimacionesPersonaje.modulate = Color(18.892, 0.0, 0.0, 1.0) #Hace que el personaje cambie a rojo
 	%AnimacionesPersonaje.stop()
 	print("Recibe daño")
+	ControladorGlobal.resetear_moneda()
 	
 	var timer: Timer = Timer.new() #Crea una variable timer, basicamente es un contador de tiempo
 	add_child(timer) #Añadimos el timer a la escena
