@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ncilt1yyq3mm" path="res://Escenas/escena_principal/escena_principal.gd" id="1_d4by0"]
 [ext_resource type="PackedScene" uid="uid://huhdnbnxbcpd" path="res://Escenas/Nivel1/nivel_1.tscn" id="2_m20ff"]
 [ext_resource type="PackedScene" uid="uid://d0qnflpp2te2c" path="res://Escenas/nivel2/nivel_2.tscn" id="3_1ccjb"]
+[ext_resource type="AudioStream" uid="uid://00elmql2lxcd" path="res://sounds/level1music.wav" id="4_opvmk"]
 
 [node name="EscenaPrincipal" type="Node2D" unique_id=1545721947]
 script = ExtResource("1_d4by0")
@@ -10,3 +11,9 @@ niveles = Array[PackedScene]([ExtResource("2_m20ff"), ExtResource("3_1ccjb")])
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1508953473]
 zoom = Vector2(2.545, 2.545)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=459164404]
+stream = ExtResource("4_opvmk")
+volume_db = -1.255
+autoplay = true
+bus = &"Musica"

@@ -12,7 +12,7 @@ func _ready() -> void:
 func _crear_nivel(numero_nivel: int):
 	#Llamamos a la pos 0 del array (Nivel 1) Y la instanciamos (Cargamos), se tiene que restar uno porque siempre sera uno menos que el num del nivel
 	_nivel_instanciado = niveles[numero_nivel - 1].instantiate() 
-	#Ahora _nivel_instanciado es el nivel que queremos cargar, es decir, el 0
+	#Ahora _nivel_instanciado es el nivel que queremos cargar, es decdir, el 0
 	add_child(_nivel_instanciado) #Añade como hijo lo que tengamos instanciado, lo añade hacia la referencia del codigo, en este caso escena_principal
 	
 	#Al crear un nuevo nivel buscara entre los hijos de la escena a ver cual es el personaje

@@ -9,3 +9,4 @@ reproductor = NodePath("AudioStreamPlayer2D")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1816259348]
 stream = ExtResource("2_xuuec")
+bus = &"SFX"
