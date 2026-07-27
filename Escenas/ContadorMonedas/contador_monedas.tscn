@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dtuiek0spxhu0"]
+
+[ext_resource type="Script" uid="uid://dy0pfn4s3tc0d" path="res://Escenas/ContadorMonedas/contador_monedas.gd" id="1_ah4n2"]
+
+[node name="ContadorMonedas" type="Control" unique_id=1403790335 node_paths=PackedStringArray("label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ah4n2")
+label = NodePath("Label")
+
+[node name="Label" type="Label" parent="." unique_id=572622089]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 40.0
+offset_right = 133.0
+offset_bottom = 63.0
+text = "Monedas: 0"

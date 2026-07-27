@@ -25,6 +25,9 @@ func _on_moneda_recogida() -> void:
 	_monedas_recogidas += 1 #Se suma 1 al contador de monedas
 	print("Monedas recogidas: ", _monedas_recogidas, "/", _total_monedas)
 	reproductor.play() #Hace que suene el sonido de la moneda, que esta en AudioStreamPlayer2D
+	
+	ControladorGlobal.sumar_moneda()
+	
 	if _monedas_recogidas == _total_monedas:
 		print("Nivel superado")
 		var nodopadre = get_parent() #Recibe el nodo padre del contenedor de monedas
