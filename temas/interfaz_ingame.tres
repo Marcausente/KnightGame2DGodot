@@ -1,0 +1,9 @@
+[gd_resource type="Theme" format=3 uid="uid://ib7pj6y57lkl"]
+
+[ext_resource type="FontFile" uid="uid://c2xxyyhegs15v" path="res://Fuentes/pixelfuente.ttf" id="1_yxusv"]
+
+[resource]
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.7019608)
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = ExtResource("1_yxusv")

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c4h7hxpfbwyjc"]
 
 [ext_resource type="Script" uid="uid://dqal0xbx1tgji" path="res://Escenas/ContadorNivelActual/contador_nivel_actual.gd" id="1_si8ng"]
+[ext_resource type="Theme" uid="uid://ib7pj6y57lkl" path="res://temas/interfaz_ingame.tres" id="2_pk0ed"]
 
 [node name="contador_nivel_actual" type="Control" unique_id=1246514060 node_paths=PackedStringArray("label")]
 layout_mode = 3
@@ -18,4 +19,5 @@ offset_left = 1044.0
 offset_top = 41.0
 offset_right = 1101.0
 offset_bottom = 64.0
+theme = ExtResource("2_pk0ed")
 text = "Nivel: 1"

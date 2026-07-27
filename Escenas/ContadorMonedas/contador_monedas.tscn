@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dtuiek0spxhu0"]
 
 [ext_resource type="Script" uid="uid://dy0pfn4s3tc0d" path="res://Escenas/ContadorMonedas/contador_monedas.gd" id="1_ah4n2"]
+[ext_resource type="Theme" uid="uid://ib7pj6y57lkl" path="res://temas/interfaz_ingame.tres" id="2_57104"]
 
 [node name="ContadorMonedas" type="Control" unique_id=1403790335 node_paths=PackedStringArray("label")]
 layout_mode = 3
@@ -18,4 +19,5 @@ offset_left = 44.0
 offset_top = 40.0
 offset_right = 133.0
 offset_bottom = 63.0
+theme = ExtResource("2_57104")
 text = "Monedas: 0"
