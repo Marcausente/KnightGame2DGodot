@@ -19,6 +19,8 @@ func _ready() -> void:
 			_total_monedas += 1 #Sumamos +1 en el grupo de monedas
 		if moneda.has_signal("moneda_recogida"): # Si tiene la señal enviada por moneda
 			moneda.moneda_recogida.connect(_on_moneda_recogida) #"Cuando emitas la señal moneda_recogida, llama automáticamente a _on_moneda_recogida()."
+			
+	ControladorGlobal.monedas_totales(_total_monedas)
 	
 
 func _on_moneda_recogida() -> void:
