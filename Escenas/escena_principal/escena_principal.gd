@@ -33,6 +33,7 @@ func _reiniciar_nivel():
 
 func siguiente_nivel():
 	_nivel_actual += 1
+	ControladorGlobal.nivel_actual(_nivel_actual)
 	ControladorGlobal.resetear_moneda() #Resetea el contador de monedas
 	_eliminar_nivel() #Ejecuta la funcion eliminar nivel
 	_crear_nivel.call_deferred(_nivel_actual) #Y lo volvemos a cargar, call deferred es para eviatar errores y cargarlo al final del frame

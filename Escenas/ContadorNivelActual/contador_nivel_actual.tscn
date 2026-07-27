@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c4h7hxpfbwyjc"]
+
+[ext_resource type="Script" uid="uid://dqal0xbx1tgji" path="res://Escenas/ContadorNivelActual/contador_nivel_actual.gd" id="1_si8ng"]
+
+[node name="contador_nivel_actual" type="Control" unique_id=1246514060 node_paths=PackedStringArray("label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_si8ng")
+label = NodePath("Label")
+
+[node name="Label" type="Label" parent="." unique_id=1903821809]
+layout_mode = 0
+offset_left = 1044.0
+offset_top = 41.0
+offset_right = 1101.0
+offset_bottom = 64.0
+text = "Nivel: 1"
