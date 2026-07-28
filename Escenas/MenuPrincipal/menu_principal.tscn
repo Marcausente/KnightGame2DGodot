@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bfkiilsdaiclk"]
 
 [ext_resource type="Theme" uid="uid://ojr4ilohdr0" path="res://temas/boton_menu_principal.tres" id="1_30os3"]
+[ext_resource type="Script" uid="uid://d3p2875a71ah" path="res://Escenas/MenuPrincipal/boton_salr.gd" id="2_ug37j"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ug37j"]
 particle_flag_disable_z = true
@@ -49,6 +50,7 @@ text = "Cargar"
 layout_mode = 2
 theme = ExtResource("1_30os3")
 text = "Salir"
+script = ExtResource("2_ug37j")
 
 [node name="Control" type="Control" parent="." unique_id=273367590]
 layout_mode = 1
