@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://62an8clnen8"]
+
+[ext_resource type="Script" uid="uid://du3mcegokevgp" path="res://Escenas/Controlador_Partida/controlador_partida.gd" id="1_qjifb"]
+[ext_resource type="Script" uid="uid://b2ciin3igevn5" path="res://Scripts/datos_partida.gd" id="2_5jihp"]
+
+[sub_resource type="Resource" id="Resource_s057j"]
+script = ExtResource("2_5jihp")
+metadata/_custom_type_script = "uid://b2ciin3igevn5"
+
+[node name="ControladorPartida" type="Node" unique_id=1022241871]
+script = ExtResource("1_qjifb")
+partida = SubResource("Resource_s057j")
