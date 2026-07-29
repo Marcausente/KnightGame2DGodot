@@ -1,6 +1,7 @@
 class_name ControladorPartida
 extends Node
 
+@export var controlador_partida: ControladorPartida
 @export var partida: DatosPartida #Partida sera la clase datos partida
 
 var _ruta: String = "user://partida.tres" #Para referenciar la ruta del archivo, user se refiere a la por defecto de Windows

@@ -3,6 +3,7 @@ extends Node2D
 @export var niveles: Array[PackedScene] #Llamamos a un array que tiene varias escenas o niveles
 var _nivel_actual: int = 1 #Variable para definir el nivel actual
 var _nivel_instanciado: Node #Instanciado se refiere al nivel que esta cargado
+@export var controlador_partida: ControladorPartida #Variable controlador_partida de tipo clase propia ControladorPartida
 
 
 # Se llama cuando empieza la funcion
@@ -23,6 +24,8 @@ func _crear_nivel(numero_nivel: int):
 			personaje.personaje_muerto.connect(_reiniciar_nivel) #Conecta el nodo de personaje al emitido por el otro script y ejecuta la funcion reiniciar nivel
 			break
 		
+	controlador_partida.guardar_partida() #Se guardara el nivel actual en la clase ControladorPartida
+		
 func _eliminar_nivel():
 	_nivel_instanciado.queue_free() #Libera el nodo en cuestion (En este caso el actual, liberar es borrar)
 
@@ -37,3 +40,9 @@ func siguiente_nivel():
 	ControladorGlobal.resetear_moneda() #Resetea el contador de monedas
 	_eliminar_nivel() #Ejecuta la funcion eliminar nivel
 	_crear_nivel.call_deferred(_nivel_actual) #Y lo volvemos a cargar, call deferred es para eviatar errores y cargarlo al final del frame
+
+func _cargar_nivel():
+	_nivel_actual = ControladorGlobal.nivelActual #Cogemos la variable nivel actual de la guardada
+	#Ahora creamos el nivel de la variable que teniamos en nivel actual
+	_crear_nivel.call_deferred(_nivel_actual) #Calldefered es para esperar a que se borre el anterior nivel antes de generar el nuevo, indispensable
+	

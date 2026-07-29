@@ -4,12 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://huhdnbnxbcpd" path="res://Escenas/Nivel1/nivel_1.tscn" id="2_m20ff"]
 [ext_resource type="PackedScene" uid="uid://d0qnflpp2te2c" path="res://Escenas/nivel2/nivel_2.tscn" id="3_1ccjb"]
 [ext_resource type="AudioStream" uid="uid://00elmql2lxcd" path="res://sounds/level1music.wav" id="4_opvmk"]
+[ext_resource type="PackedScene" uid="uid://62an8clnen8" path="res://Escenas/Controlador_Partida/controlador_partida.tscn" id="5_2cbot"]
 [ext_resource type="PackedScene" uid="uid://c4h7hxpfbwyjc" path="res://Escenas/ContadorNivelActual/contador_nivel_actual.tscn" id="5_dc0xd"]
 [ext_resource type="PackedScene" uid="uid://dtuiek0spxhu0" path="res://Escenas/ContadorMonedas/contador_monedas.tscn" id="5_p5hqc"]
 
-[node name="EscenaPrincipal" type="Node2D" unique_id=1545721947]
+[node name="EscenaPrincipal" type="Node2D" unique_id=1545721947 node_paths=PackedStringArray("controlador_partida")]
 script = ExtResource("1_d4by0")
 niveles = Array[PackedScene]([ExtResource("2_m20ff"), ExtResource("3_1ccjb")])
+controlador_partida = NodePath("ControladorPartida")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1508953473]
 zoom = Vector2(2.545, 2.545)
@@ -19,6 +21,8 @@ stream = ExtResource("4_opvmk")
 volume_db = -1.255
 autoplay = true
 bus = &"Musica"
+
+[node name="ControladorPartida" parent="." unique_id=1022241871 instance=ExtResource("5_2cbot")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1143300815]
 
