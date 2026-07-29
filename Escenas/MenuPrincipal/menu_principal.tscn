@@ -49,12 +49,13 @@ text = "Jugar"
 script = ExtResource("2_lrda8")
 escena_principal = ExtResource("4_x2bks")
 
-[node name="Cargar" type="Button" parent="VBoxContainer" unique_id=424763675 node_paths=PackedStringArray("controlador_partida")]
+[node name="Cargar" type="Button" parent="VBoxContainer" unique_id=424763675 node_paths=PackedStringArray("controlador_partida", "boton_jugar")]
 layout_mode = 2
 theme = ExtResource("1_30os3")
 text = "Cargar"
 script = ExtResource("4_vuiek")
 controlador_partida = NodePath("../../ControladorPartida")
+boton_jugar = NodePath("../Jugar")
 
 [node name="Salir" type="Button" parent="VBoxContainer" unique_id=331866693]
 layout_mode = 2
