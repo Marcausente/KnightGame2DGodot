@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bfkiilsdaiclk"]
 
 [ext_resource type="Theme" uid="uid://ojr4ilohdr0" path="res://temas/boton_menu_principal.tres" id="1_30os3"]
-[ext_resource type="Script" uid="uid://d3p2875a71ah" path="res://Escenas/MenuPrincipal/boton_salr.gd" id="2_ug37j"]
+[ext_resource type="Script" uid="uid://dfithigiao1tu" path="res://Escenas/MenuPrincipal/boton_jugar.gd" id="2_lrda8"]
+[ext_resource type="Script" uid="uid://cjjqqvfw3i5hh" path="res://Escenas/MenuPrincipal/boton_salir.gd" id="2_ug37j"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ug37j"]
 particle_flag_disable_z = true
@@ -40,6 +41,7 @@ theme_override_constants/separation = 20
 layout_mode = 2
 theme = ExtResource("1_30os3")
 text = "Jugar"
+script = ExtResource("2_lrda8")
 
 [node name="Cargar" type="Button" parent="VBoxContainer" unique_id=424763675]
 layout_mode = 2
