@@ -16,5 +16,5 @@ func cargar_partida():
 	if ResourceLoader.exists(_ruta): #Si existe un archivo de guardado en nuestra carpeta de guardado
 		partida = load(_ruta) #Mete los datos del resource de la ruta en la variable partida
 		
-		ControladorGlobal.nivelActual = partida.nivel #Ahora cargamos los datos de la partida guardada en nuestro controlador de nivel
+		ControladorGlobal.nivel_actual(partida.nivel) #Ahora cargamos los datos de la partida guardada en nuestro controlador de nivel
 		
