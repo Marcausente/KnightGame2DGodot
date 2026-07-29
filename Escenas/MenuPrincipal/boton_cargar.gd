@@ -9,4 +9,4 @@ func _ready() -> void:
 
 func _cargar():
 	controlador_partida.cargar_partida() #Llama a la funcion cargar partida del controlador
-	boton_jugar.jugar() #Ejecutara la funcion jugar del boton jugar para que inicie
+	get_tree().change_scene_to_file("res://Escenas/escena_principal/escena_principal.tscn") #Cambia directamente a la escena principal con los datos cargados
