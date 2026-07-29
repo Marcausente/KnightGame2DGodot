@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dfithigiao1tu" path="res://Escenas/MenuPrincipal/boton_jugar.gd" id="2_lrda8"]
 [ext_resource type="Script" uid="uid://cjjqqvfw3i5hh" path="res://Escenas/MenuPrincipal/boton_salir.gd" id="2_ug37j"]
 [ext_resource type="Script" uid="uid://db3bmjshgx3nl" path="res://Escenas/MenuPrincipal/boton_cargar.gd" id="4_vuiek"]
+[ext_resource type="PackedScene" uid="uid://cqms8ynqkwisb" path="res://Escenas/escena_principal/escena_principal.tscn" id="4_x2bks"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ug37j"]
 particle_flag_disable_z = true
@@ -46,6 +47,7 @@ layout_mode = 2
 theme = ExtResource("1_30os3")
 text = "Jugar"
 script = ExtResource("2_lrda8")
+escena_principal = ExtResource("4_x2bks")
 
 [node name="Cargar" type="Button" parent="VBoxContainer" unique_id=424763675 node_paths=PackedStringArray("controlador_partida")]
 layout_mode = 2
