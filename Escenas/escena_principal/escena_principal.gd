@@ -8,7 +8,10 @@ var _nivel_instanciado: Node #Instanciado se refiere al nivel que esta cargado
 
 # Se llama cuando empieza la funcion
 func _ready() -> void:
-	_crear_nivel(_nivel_actual)
+	if ControladorGlobal.nivelActual > 1: #Si el nivel actual es mas de uno
+		_cargar_nivel() #Significa que es una partida guardada y por ello cargaremos nivel
+	else:
+		_crear_nivel(_nivel_actual) #Cargamos el nivel con la variable _nivel_actual, por defecto es uno
 
 func _crear_nivel(numero_nivel: int):
 	#Llamamos a la pos 0 del array (Nivel 1) Y la instanciamos (Cargamos), se tiene que restar uno porque siempre sera uno menos que el num del nivel
