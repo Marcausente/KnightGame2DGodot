@@ -14,6 +14,10 @@ func _ready() -> void:
 		_crear_nivel(_nivel_actual) #Cargamos el nivel con la variable _nivel_actual, por defecto es uno
 
 func _crear_nivel(numero_nivel: int):
+	if numero_nivel < 1 or numero_nivel > niveles.size(): # Comprobamos si el número de nivel solicitado existe dentro del array
+		get_tree().change_scene_to_file("res://Escenas/MenuPrincipal/menu_principal.tscn") # Si no hay mas niveles volvemos al menú principal
+		return # Interrumpe la ejecucion para no cargar un nivel inexistente
+
 	#Llamamos a la pos 0 del array (Nivel 1) Y la instanciamos (Cargamos), se tiene que restar uno porque siempre sera uno menos que el num del nivel
 	_nivel_instanciado = niveles[numero_nivel - 1].instantiate() 
 	#Ahora _nivel_instanciado es el nivel que queremos cargar, es decdir, el 0
@@ -27,7 +31,8 @@ func _crear_nivel(numero_nivel: int):
 			personaje.personaje_muerto.connect(_reiniciar_nivel) #Conecta el nodo de personaje al emitido por el otro script y ejecuta la funcion reiniciar nivel
 			break
 		
-	controlador_partida.guardar_partida() #Se guardara el nivel actual en la clase ControladorPartida
+	if controlador_partida: # Comprobamos que el controlador exista antes de guardar
+		controlador_partida.guardar_partida() #Se guardara el nivel actual en la clase ControladorPartida
 		
 func _eliminar_nivel():
 	_nivel_instanciado.queue_free() #Libera el nodo en cuestion (En este caso el actual, liberar es borrar)
