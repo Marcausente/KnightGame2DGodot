@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c4h7hxpfbwyjc" path="res://Escenas/ContadorNivelActual/contador_nivel_actual.tscn" id="5_dc0xd"]
 [ext_resource type="PackedScene" uid="uid://dtuiek0spxhu0" path="res://Escenas/ContadorMonedas/contador_monedas.tscn" id="5_p5hqc"]
 [ext_resource type="Script" uid="uid://b2yy88lb4mxl8" path="res://Escenas/escena_principal/controlador_pausa.gd" id="8_4ly5i"]
+[ext_resource type="PackedScene" uid="uid://bl5wvpugnmbqu" path="res://Escenas/texto_pausa/texto_pausa.tscn" id="9_81nay"]
 
 [node name="EscenaPrincipal" type="Node2D" unique_id=1545721947 node_paths=PackedStringArray("controlador_partida")]
 script = ExtResource("1_d4by0")
@@ -27,6 +28,13 @@ bus = &"Musica"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1143300815]
 
+[node name="texto_pausa" parent="CanvasLayer" unique_id=1822708110 instance=ExtResource("9_81nay")]
+visible = false
+offset_left = 1.0
+offset_top = 33.0
+offset_right = 1.0
+offset_bottom = 33.0
+
 [node name="contador_nivel_actual" parent="CanvasLayer" unique_id=1246514060 instance=ExtResource("5_dc0xd")]
 
 [node name="ContadorMonedas" parent="CanvasLayer" unique_id=1403790335 instance=ExtResource("5_p5hqc")]
@@ -35,10 +43,11 @@ offset_top = 2.0
 offset_right = 7.0
 offset_bottom = 2.0
 
-[node name="ControladorPausa" type="Control" parent="." unique_id=2142915523]
+[node name="ControladorPausa" type="Control" parent="." unique_id=2142915523 node_paths=PackedStringArray("texto_pausa")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("8_4ly5i")
+texto_pausa = NodePath("../CanvasLayer/texto_pausa")
