@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bl5wvpugnmbqu"]
 
+[ext_resource type="FontFile" uid="uid://c2xxyyhegs15v" path="res://Fuentes/pixelfuente.ttf" id="1_3257f"]
+
 [node name="texto_pausa" type="Control" unique_id=1822708110]
 layout_mode = 3
 anchors_preset = 15
@@ -14,4 +16,5 @@ offset_left = 550.0
 offset_top = 19.0
 offset_right = 602.0
 offset_bottom = 42.0
+theme_override_fonts/font = ExtResource("1_3257f")
 text = "PAUSA"
