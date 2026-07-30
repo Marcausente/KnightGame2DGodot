@@ -13,6 +13,9 @@ func _ready() -> void:
 	else:
 		_crear_nivel(_nivel_actual) #Cargamos el nivel con la variable _nivel_actual, por defecto es uno
 
+	process_mode = Node.PROCESS_MODE_ALWAYS # Permite que este nodo reciba inputs estando pausado
+
+
 func _crear_nivel(numero_nivel: int):
 	if numero_nivel < 1 or numero_nivel > niveles.size(): # Comprobamos si el número de nivel solicitado existe dentro del array
 		get_tree().change_scene_to_file("res://Escenas/MenuPrincipal/menu_principal.tscn") # Si no hay mas niveles volvemos al menú principal
@@ -20,6 +23,7 @@ func _crear_nivel(numero_nivel: int):
 
 	#Llamamos a la pos 0 del array (Nivel 1) Y la instanciamos (Cargamos), se tiene que restar uno porque siempre sera uno menos que el num del nivel
 	_nivel_instanciado = niveles[numero_nivel - 1].instantiate() 
+	_nivel_instanciado.process_mode = Node.PROCESS_MODE_PAUSABLE # El nivel y sus elementos se pausaran al pausar el juego
 	#Ahora _nivel_instanciado es el nivel que queremos cargar, es decdir, el 0
 	add_child(_nivel_instanciado) #Añade como hijo lo que tengamos instanciado, lo añade hacia la referencia del codigo, en este caso escena_principal
 	
@@ -54,3 +58,8 @@ func _cargar_nivel():
 	#Ahora creamos el nivel de la variable que teniamos en nivel actual
 	_crear_nivel.call_deferred(_nivel_actual) #Calldefered es para esperar a que se borre el anterior nivel antes de generar el nuevo, indispensable
 	
+func _input(event: InputEvent) -> void: #Esta funcion recibe un evento input, es decir, que se apriete algo
+	if event.is_action_pressed("pausa") and get_tree().paused == false: #Si se aprieta el boton que tenemos configurado para la pausa
+		get_tree().paused = true
+	elif event.is_action_pressed("pausa") and get_tree().paused == true:
+		get_tree().paused = false
