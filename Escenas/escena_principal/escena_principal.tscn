@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://62an8clnen8" path="res://Escenas/Controlador_Partida/controlador_partida.tscn" id="5_2cbot"]
 [ext_resource type="PackedScene" uid="uid://c4h7hxpfbwyjc" path="res://Escenas/ContadorNivelActual/contador_nivel_actual.tscn" id="5_dc0xd"]
 [ext_resource type="PackedScene" uid="uid://dtuiek0spxhu0" path="res://Escenas/ContadorMonedas/contador_monedas.tscn" id="5_p5hqc"]
+[ext_resource type="Script" uid="uid://b2yy88lb4mxl8" path="res://Escenas/escena_principal/controlador_pausa.gd" id="8_4ly5i"]
 
 [node name="EscenaPrincipal" type="Node2D" unique_id=1545721947 node_paths=PackedStringArray("controlador_partida")]
 script = ExtResource("1_d4by0")
@@ -33,3 +34,11 @@ offset_left = 7.0
 offset_top = 2.0
 offset_right = 7.0
 offset_bottom = 2.0
+
+[node name="ControladorPausa" type="Control" parent="." unique_id=2142915523]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("8_4ly5i")
