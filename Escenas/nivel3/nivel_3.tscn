@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://doh81nbuct4ic"]
+
+[ext_resource type="PackedScene" uid="uid://bwkonjhs6g5a3" path="res://Escenas/bordes/bordes.tscn" id="1_ygh5p"]
+[ext_resource type="PackedScene" uid="uid://dxagokho6vqdp" path="res://Escenas/Contenedor_Monedas/conentedor_monedas.tscn" id="2_jw01r"]
+[ext_resource type="PackedScene" uid="uid://cxm8wxdnmii3w" path="res://Escenas/personaje/personaje.tscn" id="2_o2p3a"]
+[ext_resource type="TileSet" uid="uid://bcc2sh0escv8p" path="res://tile_sets/maderas.tres" id="3_m8nvv"]
+[ext_resource type="PackedScene" uid="uid://c6l7ggwpsde7q" path="res://Escenas/moneda/moneda.tscn" id="4_m8nvv"]
+
+[node name="Nivel3" type="Node2D" unique_id=6477356]
+
+[node name="Bordes" parent="." unique_id=71404413 instance=ExtResource("1_ygh5p")]
+
+[node name="Personaje" parent="." unique_id=1115841959 instance=ExtResource("2_o2p3a")]
+position = Vector2(-191, 98)
+
+[node name="Nivel3" type="TileMapLayer" parent="." unique_id=1079064241]
+tile_map_data = PackedByteArray(0, 0, 12, 0, 253, 255, 1, 0, 9, 0, 4, 0, 0, 0, 12, 0, 254, 255, 1, 0, 9, 0, 4, 0, 0, 0, 12, 0, 255, 255, 1, 0, 9, 0, 4, 0, 0, 0, 12, 0, 249, 255, 1, 0, 8, 0, 3, 0, 0, 0)
+tile_set = ExtResource("3_m8nvv")
+
+[node name="ConentedorMonedas" parent="." unique_id=268482440 instance=ExtResource("2_jw01r")]
+position = Vector2(217, -118)
+
+[node name="Moneda" parent="ConentedorMonedas" unique_id=1063987536 instance=ExtResource("4_m8nvv")]
+position = Vector2(-273, 207)
