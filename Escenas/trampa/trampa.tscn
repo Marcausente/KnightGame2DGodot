@@ -25,5 +25,5 @@ texture = SubResource("AtlasTexture_045as")
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1755855196]
-target_position = Vector2(0, 250)
+target_position = Vector2(0, 150)
 collision_mask = 4
